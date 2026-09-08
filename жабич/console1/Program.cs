@@ -10,7 +10,14 @@ namespace console1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("кважаблябушка жаби-жаби");
+            Console.WriteLine("введите первое число: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("введите второе число: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("введите третье число: ");
+            int c = Convert.ToInt32(Console.ReadLine());
+
+
         }
     }
 }

@@ -93,5 +93,23 @@ namespace console1
             }
             Console.WriteLine($"Произведение цифр числа: {product}");
         }
+
+        ///Задача 5. Максимальная и минимальная цифра числа
+        public static void MaxMinDigits()
+        {
+            int number = Convert.ToInt32(Console.ReadLine());
+            int max = 0;
+            int min = 9;
+            while (number > 0)
+            {
+                int digit = number % 10;
+                if (digit > max)
+                    max = digit;
+                if (digit < min)
+                    min = digit;
+                number /= 10;
+            }
+            Console.WriteLine($"Максимальная цифра: {max}, Минимальная цифра: {min}");
+        }
     }
 }

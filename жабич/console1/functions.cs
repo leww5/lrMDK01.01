@@ -43,15 +43,29 @@ namespace console1
 
 
         ///Задача 1. Сумма цифр натурального числа
-        public static int SumOfDigits(int number)
+        public static void SumOfDigits()
         {
+            int number = Convert.ToInt32(Console.ReadLine());
             int sum = 0;
             while (number > 0)
             {
                 sum += number % 10;
                 number /= 10;
             }
-            return sum;
+            Console.WriteLine($"Сумма цифр натурального числа: {sum}");
+        }
+
+        ///Задача 2. Переворот числа
+        public static void ReverseNumber()
+        {
+            int number = Convert.ToInt32(Console.ReadLine());
+            int reversed = 0;
+            while (number > 0)
+            {
+                reversed = reversed * 10 + number % 10;
+                number /= 10;
+            }
+            Console.WriteLine($"Перевернутое число: {reversed}");
         }
     }
 }

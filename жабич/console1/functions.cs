@@ -142,5 +142,29 @@ namespace console1
             }
             Console.WriteLine($"Сумма квадратов цифр числа: {sum}");
         }
+
+        ///Задача 8. Проверка числа на простоту
+        public static void IsPrime()
+        {
+            int number = Convert.ToInt32(Console.ReadLine());
+            bool isPrime = true;
+            if (number <= 1)
+                isPrime = false;
+            else
+            {
+                for (int i = 2; i <= Math.Sqrt(number); i++)
+                {
+                    if (number % i == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            if (isPrime)
+                Console.WriteLine("Число является простым");
+            else
+                Console.WriteLine("Число не является простым");
+        }
     }
 }

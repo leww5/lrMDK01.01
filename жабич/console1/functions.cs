@@ -128,4 +128,19 @@ namespace console1
             else
                 Console.WriteLine("Число не является палиндромом");
         }
+
+        ///Задача 7. Сумма квадратов цифр числа
+        public static void SumOfSquares()
+        {
+            int number = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            while (number > 0)
+            {
+                int digit = number % 10;
+                sum += digit * digit;
+                number /= 10;
+            }
+            Console.WriteLine($"Сумма квадратов цифр числа: {sum}");
+        }
+    }
 }

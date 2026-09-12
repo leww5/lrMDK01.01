@@ -67,5 +67,18 @@ namespace console1
             }
             Console.WriteLine($"Перевернутое число: {reversed}");
         }
+
+        ///Задача №3. Количество цифр в числе
+        public static void CountDigits()
+        {
+            int number = Convert.ToInt32(Console.ReadLine());
+            int count = 0;
+            while (number > 0)
+            {
+                count++;
+                number /= 10;
+            }
+            Console.WriteLine($"Количество цифр в числе: {count}");
+        }
     }
 }

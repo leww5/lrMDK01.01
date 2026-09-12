@@ -43,7 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="functions.cs" />
+    <Compile Include="functions\palidrom.cs" />
+    <Compile Include="functions\sum.cs" />
+    <Compile Include="functions\reverse.cs" />
+    <Compile Include="functions\count.cs" />
+    <Compile Include="functions\product.cs" />
+    <Compile Include="functions\input natural number.cs" />
+    <Compile Include="functions\max_min.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

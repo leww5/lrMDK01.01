@@ -111,5 +111,21 @@ namespace console1
             }
             Console.WriteLine($"Максимальная цифра: {max}, Минимальная цифра: {min}");
         }
-    }
+
+        /// Задача 6. Число-палиндром
+        public static void IsPalindrome()
+        {
+            int number = Convert.ToInt32(Console.ReadLine());
+            int original = number;
+            int reversed = 0;
+            while (number > 0)
+            {
+                reversed = reversed * 10 + number % 10;
+                number /= 10;
+            }
+            if (original == reversed)
+                Console.WriteLine("Число является палиндромом");
+            else
+                Console.WriteLine("Число не является палиндромом");
+        }
 }

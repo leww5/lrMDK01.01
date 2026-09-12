@@ -80,5 +80,18 @@ namespace console1
             }
             Console.WriteLine($"Количество цифр в числе: {count}");
         }
+
+        ///Задача 4. Произведение цифр числа
+        public static void ProductOfDigits()
+        {
+            int number = Convert.ToInt32(Console.ReadLine());
+            int product = 1;
+            while (number > 0)
+            {
+                product *= number % 10;
+                number /= 10;
+            }
+            Console.WriteLine($"Произведение цифр числа: {product}");
+        }
     }
 }

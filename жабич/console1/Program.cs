@@ -12,14 +12,16 @@ namespace console1
     {
         static void Main(string[] args)
         {
-            sum.SumOfDigits();
+            lab1.LessThatMiddle.CountLessThanMiddle();
+            /*sum.SumOfDigits();
             reverse.ReverseNumber();
             count.CountDigits();
             product.ProductOfDigits();
             max_min.MaxMinDigits();
             palidrom.IsPalindrome();
             sum.SumOfSquares();
-            prime.IsPrime();
+            prime.IsPrime();*/
+
         }
     }
 }

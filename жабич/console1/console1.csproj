@@ -51,6 +51,8 @@
     <Compile Include="functions\product.cs" />
     <Compile Include="functions\input natural number.cs" />
     <Compile Include="functions\max_min.cs" />
+    <Compile Include="lab1\PrimeNumber.cs" />
+    <Compile Include="lab1\LessThatMiddle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

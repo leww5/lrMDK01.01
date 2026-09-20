@@ -13,6 +13,7 @@ namespace console1
         static void Main(string[] args)
         {
             lab1.LessThatMiddle.CountLessThanMiddle();
+            lab1.PrimeNumber.IsPrime();
             /*sum.SumOfDigits();
             reverse.ReverseNumber();
             count.CountDigits();

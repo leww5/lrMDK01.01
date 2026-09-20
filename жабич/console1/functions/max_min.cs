@@ -11,6 +11,7 @@ namespace console1.functions
         ///Задача 5. Максимальная и минимальная цифра числа
         public static void MaxMinDigits()
         {
+            Console.WriteLine("Задача 5. Максимальная и минимальная цифра числа");
             int number = input_natural_number.InputNaturalNumber();
             int max = 0;
             int min = 9;
@@ -24,11 +25,13 @@ namespace console1.functions
                 number /= 10;
             }
             Console.WriteLine($"Максимальная цифра: {max}, Минимальная цифра: {min}");
+            Console.WriteLine("---");
         }
 
         ///Задача 0. Макс из 3 чисел
         public static void MaxOfThree()
         {
+            Console.WriteLine("Задача 0. Макс из 3 чисел");
             Console.WriteLine("введите первое число: ");
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("введите второе число: ");
@@ -54,7 +57,7 @@ namespace console1.functions
                     max = c;
 
             Console.WriteLine($"Maximum: {max}");
-
+            Console.WriteLine("---");
         }
 
     }

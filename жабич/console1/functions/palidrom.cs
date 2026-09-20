@@ -11,6 +11,7 @@ namespace console1.functions
         /// Задача 6. Число-палиндром
         public static void IsPalindrome()
         {
+            Console.WriteLine("Задача 6. Число-палиндром");
             int number = input_natural_number.InputNaturalNumber();
             int original = number;
             int reversed = 0;
@@ -23,6 +24,7 @@ namespace console1.functions
                 Console.WriteLine("Число является палиндромом");
             else
                 Console.WriteLine("Число не является палиндромом");
+            Console.WriteLine("---");
         }
 
     }

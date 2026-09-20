@@ -1,4 +1,5 @@
-﻿using System;
+﻿using console1.functions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -11,7 +12,14 @@ namespace console1
     {
         static void Main(string[] args)
         {
-
+            sum.SumOfDigits();
+            reverse.ReverseNumber();
+            count.CountDigits();
+            product.ProductOfDigits();
+            max_min.MaxMinDigits();
+            palidrom.IsPalindrome();
+            sum.SumOfSquares();
+            prime.IsPrime();
         }
     }
 }

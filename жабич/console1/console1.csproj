@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="functions\palidrom.cs" />
+    <Compile Include="functions\prime.cs" />
     <Compile Include="functions\sum.cs" />
     <Compile Include="functions\reverse.cs" />
     <Compile Include="functions\count.cs" />

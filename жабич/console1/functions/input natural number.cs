@@ -11,14 +11,16 @@ namespace console1
         public static int InputNaturalNumber()
         {
             int number;
-            do
-            {
-                Console.WriteLine("Введите натуральное число: ");
-                number = Convert.ToInt32(Console.ReadLine());
-                if (number <= 0)
+            do { Console.Write("Введите натуральное число: "); 
+                string input = Console.ReadLine();
+                if (!int.TryParse(input, out number)) 
                 {
-                    Console.WriteLine("Ошибка: введено не натуральное число. Попробуйте снова.");
-                }
+                    Console.WriteLine("Ошибка: введено не число. Попробуйте снова."); continue; 
+                } 
+                if (number <= 0) 
+                {
+                    Console.WriteLine("Ошибка: введено не натуральное число. Попробуйте снова."); 
+                } 
             } while (number <= 0);
             return number;
         }

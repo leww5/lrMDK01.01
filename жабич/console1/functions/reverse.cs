@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace console1
 {
-    internal class function2_reverse
+    internal class reverse
     {
         ///Задача 2. Переворот числа
         public static void ReverseNumber()
         {
+            Console.WriteLine("Задача 2.Переворот числа");
             int number = input_natural_number.InputNaturalNumber();
             int reversed = 0;
             while (number > 0)
@@ -19,6 +20,7 @@ namespace console1
                 number /= 10;
             }
             Console.WriteLine($"Перевернутое число: {reversed}");
+            Console.WriteLine("---");
         }
     }
 }

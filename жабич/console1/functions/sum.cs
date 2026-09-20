@@ -11,6 +11,7 @@ namespace console1
         ///Задача 1. Сумма цифр натурального числа
         public static void SumOfDigits()
         {
+            Console.WriteLine("Задача 1. Сумма цифр натурралного числа");
             int number = input_natural_number.InputNaturalNumber();
             int sum = 0;
             while (number > 0)
@@ -19,11 +20,13 @@ namespace console1
                 number /= 10;
             }
             Console.WriteLine($"Сумма цифр натурального числа: {sum}");
+            Console.WriteLine("---");
         }
 
         ///Задача 7. Сумма квадратов цифр числа
         public static void SumOfSquares()
         {
+            Console.WriteLine("Задача 7. Сумма квадратов цифр числа");
             int number = input_natural_number.InputNaturalNumber();
             int sum = 0;
             while (number > 0)
@@ -33,6 +36,7 @@ namespace console1
                 number /= 10;
             }
             Console.WriteLine($"Сумма квадратов цифр числа: {sum}");
+            Console.WriteLine("---");
         }        
     }
 }

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace console1.functions
 {
-    internal class function4_product
+    internal class product
     {
         ///Задача 4. Произведение цифр числа
         public static void ProductOfDigits()
         {
+            Console.WriteLine("Задача 4. Произведение цифр числа");
             int number = input_natural_number.InputNaturalNumber();
             int product = 1;
             while (number > 0)
@@ -19,6 +20,7 @@ namespace console1.functions
                 number /= 10;
             }
             Console.WriteLine($"Произведение цифр числа: {product}");
+            Console.WriteLine("---");
         }
     }
 }

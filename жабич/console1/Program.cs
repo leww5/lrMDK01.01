@@ -1,4 +1,5 @@
 ﻿using console1.functions;
+using console1.work1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,9 @@ namespace console1
     {
         static void Main(string[] args)
         {
-            lab1.LessThatMiddle.CountLessThanMiddle();
+            /*lab1.LessThatMiddle.CountLessThanMiddle();
             lab1.PrimeNumber.IsPrime();
-            /*sum.SumOfDigits();
+            sum.SumOfDigits();
             reverse.ReverseNumber();
             count.CountDigits();
             product.ProductOfDigits();
@@ -22,6 +23,8 @@ namespace console1
             palidrom.IsPalindrome();
             sum.SumOfSquares();
             prime.IsPrime();*/
+
+            min_max_guests_in_cofe.quest2();
 
         }
     }

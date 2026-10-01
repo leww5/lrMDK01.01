@@ -2,6 +2,7 @@
 using console1.work1;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -43,6 +44,11 @@ namespace console1
             pc pc5 = new pc() { name_ = "Второй на Интел", work_ = true };
 
             List<pc> pcs = new List<pc> { pc1, pc2, pc3, pc4, pc5 };
+
+            foreach (pc items in pcs)
+            {
+               objects__objects.PrintPc(items.name_, items.work_);
+            }
 
             Console.WriteLine("---");
 

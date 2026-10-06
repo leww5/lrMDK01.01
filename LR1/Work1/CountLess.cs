@@ -20,8 +20,8 @@ namespace ConsoleApp1
             }
             double average = array.Average();
             int count = array.Count(x => x < average);
-
-
+            Console.WriteLine($"Количество элементов, меньших среднего значения массива ({average}): {count}");
+            Console.WriteLine("---");
         }
 
         public static int InputNaturalNumber()

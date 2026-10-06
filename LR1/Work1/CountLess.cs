@@ -19,6 +19,9 @@ namespace ConsoleApp1
                 array[i] = int.Parse(Console.ReadLine());
             }
             double average = array.Average();
+            int count = array.Count(x => x < average);
+
+
         }
 
         public static int InputNaturalNumber()

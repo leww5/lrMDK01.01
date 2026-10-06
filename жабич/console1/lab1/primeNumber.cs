@@ -11,6 +11,16 @@ namespace console1.lab1
         /// Задача 2: отобрать все простые числа в диапазоне от 10 до 2000 и вывести в формате [a1, a2, ...]
         public static void IsPrime()
         {
+            List<int> primeNumbers = new List<int>();
+            for (int i = 10; i <= 2000; i++)
+            {
+                if (IsPrimeNumber(i))
+                {
+                    primeNumbers.Add(i);
+                }
+            }
+            Console.WriteLine("Простые числа в диапазоне от 10 до 2000:");
+            Console.WriteLine($"[{string.Join(", ", primeNumbers)}]");
         }
 
         private static bool IsPrimeNumber(int number)

@@ -29,7 +29,6 @@ namespace Work1
             }
         }
 
-        // Подзадача: чтение номера препарата с проверкой
         public static int ReadIntInRange(string prompt, int min, int max)
         {
             while (true)
@@ -49,5 +48,26 @@ namespace Work1
                 return v;
             }
         }
+
+        public static int ReadNonNegativeInt(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string s = Console.ReadLine();
+                if (!int.TryParse(s, out int v))
+                {
+                    Console.WriteLine("Некорректный ввод. Введите целое число.");
+                    continue;
+                }
+                if (v < 0)
+                {
+                    Console.WriteLine("Количество не может быть меньше нуля. Повторите.");
+                    continue;
+                }
+                return v;
+            }
+        }
+
     }
 }

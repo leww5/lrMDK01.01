@@ -8,6 +8,10 @@ namespace Work2
 {
     internal class PrimeNumbers
     {
+        public static void IsPrime()
+        {
+            List<int> primeNumbers = new List<int>();
+        }
 
         private static bool IsPrimeNumber(int number)
         {

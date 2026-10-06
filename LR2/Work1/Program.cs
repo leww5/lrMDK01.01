@@ -14,6 +14,17 @@ namespace Work1
             functions.PrintAssortment(products);
 
             int[] requested = functions.ReadOrder(products);
+
+            if (functions.TryProcessOrder(products, requested, out int totalCost, out string missing))
+            {
+                Console.WriteLine($"Стоимость заказа: {totalCost} руб.");
+            }
+            else
+            {
+                Console.WriteLine($"Недостаточно: {missing}");
+            }
+
+            functions.PrintStocks(products);
         }
     }
 }

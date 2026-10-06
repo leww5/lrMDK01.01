@@ -101,5 +101,18 @@ namespace Work1
             }
             return true;
         }
+
+        public static void PrintStocks(List<product.Product> products)
+        {
+            Console.Write("Остатки упаковок: ");
+            for (int i = 0; i < products.Count; i++)
+            {
+                product.Product p = products[i];
+                Console.Write(p.Name_ + " " + p.Stock_);
+                if (i < products.Count - 1) Console.Write(", ");
+            }
+            Console.WriteLine();
+        }
+
     }
 }

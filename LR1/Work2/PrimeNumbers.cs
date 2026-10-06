@@ -18,7 +18,8 @@ namespace Work2
                     primeNumbers.Add(i);
                 }
             }
-
+            Console.WriteLine("Простые числа в диапазоне от 10 до 2000:");
+            Console.WriteLine($"[{string.Join(", ", primeNumbers)}]");
         }
 
         private static bool IsPrimeNumber(int number)

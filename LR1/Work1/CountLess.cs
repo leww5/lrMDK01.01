@@ -8,6 +8,10 @@ namespace ConsoleApp1
 {
     internal class CountLess
     {
+        public static void CountLessThanMiddle()
+        {
+        }
+
         public static int InputNaturalNumber()
         {
             int number;

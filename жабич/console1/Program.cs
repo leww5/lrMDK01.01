@@ -15,7 +15,7 @@ namespace console1
     {
         static void Main(string[] args)
         {
-            functions.prime.IsPrime();
+            lab1.PrimeNumber.IsPrime();
         }
     }
 }

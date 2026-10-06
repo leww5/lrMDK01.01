@@ -10,6 +10,7 @@ namespace Work2
     {
         static void Main(string[] args)
         {
+            PrimeNumbers.IsPrime();
         }
     }
 }

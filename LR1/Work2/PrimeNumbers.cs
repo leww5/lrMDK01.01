@@ -11,6 +11,14 @@ namespace Work2
         public static void IsPrime()
         {
             List<int> primeNumbers = new List<int>();
+            for (int i = 10; i <= 2000; i++)
+            {
+                if (IsPrimeNumber(i))
+                {
+                    primeNumbers.Add(i);
+                }
+            }
+
         }
 
         private static bool IsPrimeNumber(int number)

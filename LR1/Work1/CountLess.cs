@@ -10,6 +10,14 @@ namespace ConsoleApp1
     {
         public static void CountLessThanMiddle()
         {
+            Console.WriteLine("Введите количество элементов массива (натуральное число)");
+            int n = InputNaturalNumber();
+            int[] array = new int[n];
+            Console.WriteLine("Введите элементы массива:");
+            for (int i = 0; i < n; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
         }
 
         public static int InputNaturalNumber()

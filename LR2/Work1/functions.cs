@@ -69,5 +69,17 @@ namespace Work1
             }
         }
 
+        public static int[] ReadOrder(List<product.Product> products)
+        {
+            int[] requested = new int[products.Count];
+            while (true)
+            {
+                int num = ReadIntInRange("Введите номер препарата (0 — конец заказа): ", 0, products.Count);
+                if (num == 0) break;
+                int qty = ReadNonNegativeInt("Введите количество: ");
+                requested[num - 1] += qty;
+            }
+            return requested;
+        }
     }
 }

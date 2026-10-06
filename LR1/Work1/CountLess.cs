@@ -29,7 +29,7 @@ namespace ConsoleApp1
             int number;
             do
             {
-                Console.Write("Введите натуральное число: ");
+                Console.Write("Введите количество элементов в массиве число: ");
                 string input = Console.ReadLine();
                 if (!int.TryParse(input, out number))
                 {

@@ -28,5 +28,26 @@ namespace Work1
                 Console.WriteLine($"{i + 1}. {p.Name_} — {p.Price_} руб., {p.Stock_} уп.");
             }
         }
+
+        // Подзадача: чтение номера препарата с проверкой
+        public static int ReadIntInRange(string prompt, int min, int max)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string s = Console.ReadLine();
+                if (!int.TryParse(s, out int v))
+                {
+                    Console.WriteLine("Некорректный ввод. Введите целое число.");
+                    continue;
+                }
+                if (v < min || v > max)
+                {
+                    Console.WriteLine($"Число вне диапазона {min}–{max}. Повторите.");
+                    continue;
+                }
+                return v;
+            }
+        }
     }
 }

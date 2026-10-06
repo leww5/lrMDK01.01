@@ -81,5 +81,25 @@ namespace Work1
             }
             return requested;
         }
+
+        public static bool TryProcessOrder(List<product.Product> products, int[] requested, out int totalCost, out string missingProductName)
+        {
+            totalCost = 0;
+            missingProductName = null;
+            for (int i = 0; i < products.Count; i++)
+            {
+                if (requested[i] > products[i].Stock_)
+                {
+                    missingProductName = products[i].Name_;
+                    return false;
+                }
+            }
+            for (int i = 0; i < products.Count; i++)
+            {
+                products[i].Stock_ -= requested[i];
+                totalCost += requested[i] * products[i].Price_;
+            }
+            return true;
+        }
     }
 }

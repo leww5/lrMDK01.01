@@ -11,6 +11,7 @@ namespace Work1
         static void Main(string[] args)
         {
             List<product.Product> products = functions.CreateAssortment();
+            functions.PrintAssortment(products);
         }
     }
 }

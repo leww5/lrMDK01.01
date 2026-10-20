@@ -16,5 +16,16 @@ namespace Work1
                 new product.Product { Name_ = "витамины", Price_ = 480, Stock_ = 15 }
             };
         }
+        public static void PrintAssortment(List<product.Product> products)
+        {
+            Console.WriteLine("Ассортимент:");
+            for (int i = 0; i < products.Count; i++)
+            {
+                product.Product p = products[i];
+                Console.WriteLine($"{i + 1}. {p.Name_} — {p.Price_} руб., {p.Stock_} уп.");
+            }
+        }
+
+
     }
 }

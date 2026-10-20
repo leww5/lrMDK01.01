@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Work1
 {
@@ -12,11 +9,11 @@ namespace Work1
         {
             return new List<product.Product>
             {
-                new product.Product("анальгин", 35, 30),
-                new product.Product("аспирин", 40, 25),
-                new product.Product("йod", 120, 20),
-                new product.Product("амоксициллин", 650, 12),
-                new product.Product("витамины", 480, 15)
+                new product.Product { Name_ = "анальгин", Price_ = 35, Stock_ = 30 },
+                new product.Product { Name_ = "аспирин", Price_ = 40, Stock_ = 25 },
+                new product.Product { Name_ = "йод", Price_ = 120, Stock_ = 20 },
+                new product.Product { Name_ = "амоксициллин", Price_ = 650, Stock_ = 12 },
+                new product.Product { Name_ = "витамины", Price_ = 480, Stock_ = 15 }
             };
         }
         public static void PrintAssortment(List<product.Product> products)
@@ -96,8 +93,10 @@ namespace Work1
             }
             for (int i = 0; i < products.Count; i++)
             {
-                products[i].Stock_ -= requested[i];
-                totalCost += requested[i] * products[i].Price_;
+                product.Product p = products[i];
+                p.Stock_ -= requested[i];
+                products[i] = p;
+                totalCost += requested[i] * p.Price_;
             }
             return true;
         }

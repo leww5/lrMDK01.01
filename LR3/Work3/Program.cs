@@ -10,6 +10,8 @@ namespace Work3
     {
         static void Main(string[] args)
         {
+            Func.PrintAssortment();
+
         }
     }
 }

@@ -22,5 +22,12 @@ namespace Work3
         private int price_;
         private int stock_;
 
+        public Product(string name, int price, int stock)
+        {
+            name_ = name;
+            price_ = price;
+            stock_ = stock;
+        }
+
     }
 }

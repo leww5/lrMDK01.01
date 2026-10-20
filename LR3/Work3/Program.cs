@@ -22,6 +22,8 @@ namespace Work3
             {
                 Console.WriteLine($"Недостаточно: {missing}");
             }
+
+            Func.PrintStocks();
         }
     }
 }

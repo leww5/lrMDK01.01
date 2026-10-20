@@ -46,5 +46,25 @@ namespace Work1
             }
         }
 
+        public static int ReadNonNegativeInt(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string s = Console.ReadLine();
+                if (!int.TryParse(s, out int v))
+                {
+                    Console.WriteLine("Некорректный ввод. Введите целое число.");
+                    continue;
+                }
+                if (v < 0)
+                {
+                    Console.WriteLine("Количество не может быть меньше нуля. Повторите.");
+                    continue;
+                }
+                return v;
+            }
+        }
+
     }
 }

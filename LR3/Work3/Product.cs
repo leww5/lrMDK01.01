@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Work3
 {
-    internal class Product
-    {
-        public enum ProductType
+    public enum ProductType
         {
             Analgin = 1,
             Aspirin = 2,
@@ -17,6 +15,12 @@ namespace Work3
             Vitamins = 5
         }
 
+
+    internal class Product
+    {
+        private string name_;
+        private int price_;
+        private int stock_;
 
     }
 }

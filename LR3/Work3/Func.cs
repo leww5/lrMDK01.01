@@ -107,6 +107,17 @@ namespace Work3
             }
             return true;
         }
+        public static void PrintStocks()
+        {
+            Console.Write("Остатки упаковок: ");
+            for (int i = 1; i <= (int)Work3.ProductType.Vitamins; i++)
+            {
+                Work3.Product p = GetProduct((Work3.ProductType)i);
+                Console.Write(p.GetName() + " " + p.GetStock());
+                if (i < (int)Work3.ProductType.Vitamins) Console.Write(", ");
+            }
+            Console.WriteLine();
+        }
     }
     }
 }

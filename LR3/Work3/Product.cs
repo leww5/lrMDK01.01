@@ -32,5 +32,9 @@ namespace Work3
         {
             return name_;
         }
+        public int GetPrice()
+        {
+            return price_;
+        }
     }
 }

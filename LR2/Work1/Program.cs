@@ -15,6 +15,14 @@ namespace Work1
 
             int[] requested = functions.ReadOrder(products);
 
+            if (functions.TryProcessOrder(products, requested, out int totalCost, out string missing))
+            {
+                Console.WriteLine($"Стоимость заказа: {totalCost} руб.");
+            }
+            else
+            {
+                Console.WriteLine($"Недостаточно: {missing}");
+            }
         }
     }
 }

@@ -28,6 +28,9 @@ namespace Work3
             price_ = price;
             stock_ = stock;
         }
-
+        public string GetName()
+        {
+            return name_;
+        }
     }
 }

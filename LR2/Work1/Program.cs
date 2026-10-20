@@ -23,6 +23,8 @@ namespace Work1
             {
                 Console.WriteLine($"Недостаточно: {missing}");
             }
+
+            functions.PrintStocks(products);
         }
     }
 }

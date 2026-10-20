@@ -12,6 +12,8 @@ namespace Work3
         {
             Func.PrintAssortment();
 
+            int[] requested = Func.ReadOrder();
+
         }
     }
 }

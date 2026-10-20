@@ -36,5 +36,9 @@ namespace Work3
         {
             return price_;
         }
+        public int GetStock()
+        {
+            return stock_;
+        }
     }
 }

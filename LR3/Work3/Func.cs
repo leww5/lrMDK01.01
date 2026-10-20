@@ -86,6 +86,27 @@ namespace Work3
             }
             return requested;
         }
+        public static bool TryProcessOrder(int[] requested, out int totalCost, out string missingProductName)
+        {
+            totalCost = 0;
+            missingProductName = null;
+            for (int i = 1; i <= (int)Work3.ProductType.Vitamins; i++)
+            {
+                Work3.Product p = GetProduct((Work3.ProductType)i);
+                if (requested[i - 1] > p.GetStock())
+                {
+                    missingProductName = p.GetName();
+                    return false;
+                }
+            }
+            for (int i = 1; i <= (int)Work3.ProductType.Vitamins; i++)
+            {
+                Work3.Product p = GetProduct((Work3.ProductType)i);
+                p.ReduceStock(requested[i - 1]);
+                totalCost += requested[i - 1] * p.GetPrice();
+            }
+            return true;
+        }
     }
     }
 }

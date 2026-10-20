@@ -27,5 +27,15 @@ namespace Work3
             }
         }
 
+        public static void PrintAssortment()
+        {
+            Console.WriteLine("Ассортимент:");
+            for (int i = 1; i <= (int)Work3.ProductType.Vitamins; i++)
+            {
+                Work3.Product p = GetProduct((Work3.ProductType)i);
+                Console.WriteLine($"{i}. {p.GetName()} — {p.GetPrice()} руб., {p.GetStock()} уп.");
+            }
+        }
+
     }
 }

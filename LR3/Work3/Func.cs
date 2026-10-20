@@ -73,6 +73,19 @@ namespace Work3
                 return v;
             }
         }
+        public static int[] ReadOrder()
+        {
+            int productCount = (int)product.ProductType.Vitamins;
+            int[] requested = new int[productCount];
+            while (true)
+            {
+                int num = ReadIntInRange("Введите номер препарата (0 — конец заказа): ", 0, productCount);
+                if (num == 0) break;
+                int qty = ReadNonNegativeInt("Введите количество: ");
+                requested[num - 1] += qty;
+            }
+            return requested;
+        }
     }
     }
 }

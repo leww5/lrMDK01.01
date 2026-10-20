@@ -12,6 +12,9 @@ namespace Work1
         {
             List<product.Product> products = functions.CreateAssortment();
             functions.PrintAssortment(products);
+
+            int[] requested = functions.ReadOrder(products);
+
         }
     }
 }

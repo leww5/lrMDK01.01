@@ -40,5 +40,9 @@ namespace Work3
         {
             return stock_;
         }
+        public void ReduceStock(int quantity)
+        {
+            stock_ -= quantity;
+        }
     }
 }

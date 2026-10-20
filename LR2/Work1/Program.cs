@@ -10,21 +10,6 @@ namespace Work1
     {
         static void Main(string[] args)
         {
-            List<product.Product> products = functions.CreateAssortment();
-            functions.PrintAssortment(products);
-
-            int[] requested = functions.ReadOrder(products);
-
-            if (functions.TryProcessOrder(products, requested, out int totalCost, out string missing))
-            {
-                Console.WriteLine($"Стоимость заказа: {totalCost} руб.");
-            }
-            else
-            {
-                Console.WriteLine($"Недостаточно: {missing}");
-            }
-
-            functions.PrintStocks(products);
         }
     }
 }

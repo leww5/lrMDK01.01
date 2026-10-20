@@ -14,6 +14,14 @@ namespace Work3
 
             int[] requested = Func.ReadOrder();
 
+            if (Func.TryProcessOrder(requested, out int totalCost, out string missing))
+            {
+                Console.WriteLine($"Стоимость заказа: {totalCost} руб.");
+            }
+            else
+            {
+                Console.WriteLine($"Недостаточно: {missing}");
+            }
         }
     }
 }

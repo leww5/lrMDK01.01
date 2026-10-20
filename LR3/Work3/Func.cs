@@ -36,6 +36,24 @@ namespace Work3
                 Console.WriteLine($"{i}. {p.GetName()} — {p.GetPrice()} руб., {p.GetStock()} уп.");
             }
         }
-
+        public static int ReadIntInRange(string prompt, int min, int max)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string s = Console.ReadLine();
+                if (!int.TryParse(s, out int v))
+                {
+                    Console.WriteLine("Некорректный ввод. Введите целое число.");
+                    continue;
+                }
+                if (v < min || v > max)
+                {
+                    Console.WriteLine($"Число вне диапазона {min}–{max}. Повторите.");
+                    continue;
+                }
+                return v;
+            }
+        }
     }
 }

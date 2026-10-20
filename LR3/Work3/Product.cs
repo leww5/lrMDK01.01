@@ -6,16 +6,6 @@ using System.Threading.Tasks;
 
 namespace Work3
 {
-    public enum ProductType
-        {
-            Analgin = 1,
-            Aspirin = 2,
-            Iodine = 3,
-            Amoxicillin = 4,
-            Vitamins = 5
-        }
-
-
     internal class Product
     {
         private string name_;

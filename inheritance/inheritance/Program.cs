@@ -58,7 +58,7 @@ namespace inheritance
                 double discount = product.CalculateDiscount(product.GetCount());
 
                 Console.WriteLine(
-                    $"{product.GetName()}: количество {product.GetCount()}, скидка {discount}%");
+                    $"{product.GetName()}: стоимость {product.GetPrice()}, количество {product.GetCount()}, стоимость без скидки {product.GetPrice() * product.GetCount()}, скидка {discount}%, итоговая стоимость {product.GetPrice() * product.GetCount() * (1 - (discount / 100.0))}");
             }
         }
     }

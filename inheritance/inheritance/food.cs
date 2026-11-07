@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace inheritance
 {
-    internal class food : product
+    public class Food : Product
     {
 
-        public override double CalculateDiscount(int count)
+        public override int CalculateDiscount()
         {
             int discount;
-            switch (count)
+            switch (GetCount())
             {
                 default:
                     discount = DefaultDiscount;

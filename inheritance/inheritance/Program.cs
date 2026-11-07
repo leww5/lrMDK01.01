@@ -10,29 +10,29 @@ namespace inheritance
     {
         static void Main(string[] args)
         {
-            List<product> products = new List<product>
+            List<Product> products = new List<Product>
             {
-                new product()
+                new Product()
                     .SetName("Товар без скидки")
                     .SetPrice(100)
                     .SetCount(3),
 
-                new food()
+                new Food()
                     .SetName("Продукт без скидки")
                     .SetPrice(80)
                     .SetCount(10),
 
-                new food()
+                new Food()
                     .SetName("Продукт со скидкой 10%")
                     .SetPrice(80)
                     .SetCount(20),
 
-                new food()
+                new Food()
                     .SetName("Продукт со скидкой 30%")
                     .SetPrice(80)
                     .SetCount(150),
 
-                new food()
+                new Food()
                     .SetName("Продукт со скидкой 50%")
                     .SetPrice(80)
                     .SetCount(301),
@@ -53,9 +53,9 @@ namespace inheritance
                     .SetCount(11)
             };
 
-            foreach (product product in products)
+            foreach (Product product in products)
             {
-                double discount = product.CalculateDiscount(product.GetCount());
+                int discount = product.CalculateDiscount();
 
                 Console.WriteLine(
                     $"{product.GetName()}: стоимость {product.GetPrice()}, количество {product.GetCount()}, стоимость без скидки {product.GetPrice() * product.GetCount()}, скидка {discount}%, итоговая стоимость {product.GetPrice() * product.GetCount() * (1 - (discount / 100.0))}");

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace inheritance
 {
-    internal class product
+    public class Product
     {
         protected const int DefaultDiscount = 0;
 
@@ -15,17 +15,17 @@ namespace inheritance
         protected double price_; /// цена за единицу
         protected int count_; /// число проданных единиц
 
-        public product SetName(string name)
+        public Product SetName(string name)
         {
             name_ = name;
             return this;    
         }
-        public product SetPrice(double price)
+        public Product SetPrice(double price)
         {
             price_ = price;
             return this;
         }
-        public product SetCount(int count)
+        public Product SetCount(int count)
         {
             count_ = count;
             return this;
@@ -44,10 +44,10 @@ namespace inheritance
             return count_;
         }
 
-        public virtual double CalculateDiscount(int count)
+        public virtual int CalculateDiscount()
         {
             int discount;
-            switch(count)
+            switch(GetCount())
             {
                 default:
                     discount = DefaultDiscount;

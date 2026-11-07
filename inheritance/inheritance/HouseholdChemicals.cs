@@ -17,7 +17,7 @@ namespace inheritance
                 default:
                     discount = DefaultDiscount;
                     break;
-                case int n when n >= 5 && n < 10:
+                case int n when n >= 5 && n <= 10:
                     discount = 15;
                     break;
                 case int n when n > 10:

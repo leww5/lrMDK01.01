@@ -20,7 +20,7 @@ namespace inheritance
                 case int n when n >= 20 && n < 150:
                     discount = 10;
                     break;
-                case int n when n >= 150 && n < 300:
+                case int n when n >= 150 && n <= 300:
                     discount = 30;
                     break;
                 case int n when n > 300:

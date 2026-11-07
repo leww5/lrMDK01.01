@@ -15,20 +15,20 @@ namespace inheritance
         protected double price_; /// цена за единицу
         protected int count_; /// число проданных единиц
 
-        public Product SetName(string name)
+        public string SetName(string name)
         {
             name_ = name;
-            return this;    
+            return name_;
         }
-        public Product SetPrice(double price)
+        public double SetPrice(double price)
         {
             price_ = price;
-            return this;
+            return price_;
         }
-        public Product SetCount(int count)
+        public int SetCount(int count)
         {
             count_ = count;
-            return this;
+            return count_;
         }
 
         public string GetName()

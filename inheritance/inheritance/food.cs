@@ -27,7 +27,7 @@ namespace inheritance
                     discount = 50;
                     break;
             }
-            return price_ * count_ * (1 - (discount / 100.0));
+            return discount;
         }
     }
 }

@@ -9,6 +9,8 @@ namespace inheritance
 {
     internal class product
     {
+        protected const int DefaultDiscount = 0;
+
         protected string name_; /// название
         protected double price_; /// цена за единицу
         protected int count_; /// число проданных единиц
@@ -42,9 +44,15 @@ namespace inheritance
             return count_;
         }
 
-        public virtual double Discount()
+        public virtual double CalculateDiscount(int count)
         {
-            int discount = 0;
+            int discount;
+            switch(count)
+            {
+                default:
+                    discount = DefaultDiscount;
+                    break;
+            }
             return price_ * count_ * (1 - (discount / 100.0));
         }
     }

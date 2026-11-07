@@ -8,5 +8,6 @@ namespace inheritance
 {
     internal class food : product
     {
+
     }
 }

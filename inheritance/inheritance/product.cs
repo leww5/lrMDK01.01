@@ -9,9 +9,9 @@ namespace inheritance
 {
     internal class product
     {
-        protected string name_;
-        protected double price_;
-        protected int count_;
+        protected string name_; /// название
+        protected double price_; /// цена за единицу
+        protected int count_; /// число проданных единиц
 
         public product SetName(string name)
         {
@@ -42,5 +42,10 @@ namespace inheritance
             return count_;
         }
 
+        public virtual double Discount()
+        {
+            int discount = 0;
+            return price_ * count_ * (1 - (discount / 100.0));
+        }
     }
 }

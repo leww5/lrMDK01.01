@@ -53,6 +53,13 @@ namespace inheritance
                     .SetCount(11)
             };
 
+            foreach (product product in products)
+            {
+                double discount = product.CalculateDiscount(product.GetCount());
+
+                Console.WriteLine(
+                    $"{product.GetName()}: количество {product.GetCount()}, скидка {discount}%");
+            }
         }
     }
 }

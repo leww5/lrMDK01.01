@@ -12,7 +12,7 @@ namespace inheritance
         public override int CalculateDiscount()
         {
             int discount;
-            switch (GetCount())
+            switch (count_)
             {
                 default:
                     discount = DefaultDiscount;

@@ -15,20 +15,17 @@ namespace inheritance
         protected double price_; /// цена за единицу
         protected int count_; /// число проданных единиц
 
-        public string SetName(string name)
+        public void SetName(string name)
         {
             name_ = name;
-            return name_;
         }
-        public double SetPrice(double price)
+        public void SetPrice(double price)
         {
             price_ = price;
-            return price_;
         }
-        public int SetCount(int count)
+        public void SetCount(int count)
         {
             count_ = count;
-            return count_;
         }
 
         public string GetName()
@@ -46,14 +43,7 @@ namespace inheritance
 
         public virtual int CalculateDiscount()
         {
-            int discount;
-            switch(GetCount())
-            {
-                default:
-                    discount = DefaultDiscount;
-                    break;
-            }
-            return discount;
+            return DefaultDiscount;
         }
     }
 }

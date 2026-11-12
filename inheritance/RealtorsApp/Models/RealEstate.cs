@@ -65,5 +65,10 @@ namespace RealtorsApp.Models
         {
             return defaultDiscount_;
         }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine($"{GetEstateType()} | Площадь: {GetArea()} м² | Адрес: {GetAddress()} | Стоимость: {GetCost()} | Собственник: {GetOwner()}");
+        }
     }
 }

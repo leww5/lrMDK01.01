@@ -4,71 +4,76 @@ namespace RealtorsApp.Models
 {
     public class RealEstate
     {
-        protected string type_;
-        protected decimal area_;
-        protected string address_;
-        protected decimal cost_;
-        protected string owner_;
-        protected int defaultDiscount_;
+        protected string Type_;
+        protected decimal Area_;
+        protected string Address_;
+        protected decimal Cost_;
+        protected string Owner_;
+        protected int DefaultDiscount_;
 
         public string GetEstateType()
         {
-            return type_;
+            return Type_;
         }
 
         public void SetEstateType(string type)
         {
-            type_ = type;
+            Type_ = type;
         }
 
         public decimal GetArea()
         {
-            return area_;
+            return Area_;
         }
 
         public void SetArea(decimal area)
         {
-            area_ = area;
+            Area_ = area;
         }
 
         public string GetAddress()
         {
-            return address_;
+            return Address_;
         }
 
         public void SetAddress(string address)
         {
-            address_ = address;
+            Address_ = address;
         }
 
         public decimal GetCost()
         {
-            return cost_;
+            return Cost_;
         }
 
         public void SetCost(decimal cost)
         {
-            cost_ = cost;
+            Cost_ = cost;
         }
 
         public string GetOwner()
         {
-            return owner_;
+            return Owner_;
         }
 
         public void SetOwner(string owner)
         {
-            owner_ = owner;
+            Owner_ = owner;
         }
 
         public int GetDefaultDiscount()
         {
-            return defaultDiscount_;
+            return DefaultDiscount_;
         }
 
         public void PrintInfo()
         {
             Console.WriteLine($"{GetEstateType()} | Площадь: {GetArea()} м² | Адрес: {GetAddress()} | Стоимость: {GetCost()} | Собственник: {GetOwner()}");
+        }
+
+        public virtual int CalculateDiscount()
+        {
+            return DefaultDiscount_;
         }
     }
 }

@@ -5,9 +5,9 @@ namespace RealtorsApp.Models
     public class RealEstate
     {
         protected string Type_;
-        protected decimal Area_;
+        protected int Area_;
         protected string Address_;
-        protected decimal Cost_;
+        protected double Cost_;
         protected string Owner_;
         protected int DefaultDiscount_;
 
@@ -21,12 +21,12 @@ namespace RealtorsApp.Models
             Type_ = type;
         }
 
-        public decimal GetArea()
+        public double GetArea()
         {
             return Area_;
         }
 
-        public void SetArea(decimal area)
+        public void SetArea(int area)
         {
             Area_ = area;
         }
@@ -41,12 +41,12 @@ namespace RealtorsApp.Models
             Address_ = address;
         }
 
-        public decimal GetCost()
+        public double GetCost()
         {
             return Cost_;
         }
 
-        public void SetCost(decimal cost)
+        public void SetCost(double cost)
         {
             Cost_ = cost;
         }

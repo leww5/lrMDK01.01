@@ -5,9 +5,12 @@ namespace RealtorsApp.Services
 {
     public class DiscountService
     {
-        public int GetDiscount(RealEstate estate)
+        public double GetFinalCost(RealEstate estate)
         {
-            return estate.CalculateDiscount();
+            double cost = estate.GetCost();
+            int discount = estate.CalculateDiscount();
+
+            return cost - cost * discount / 100;
         }
     }
 }

@@ -122,6 +122,40 @@ namespace RealtorsApp.ConsoleUI
             }
         }
 
+        public void SearchMenu(List<RealEstate> estates)
+        {
+            int command;
+            bool isValid;
+
+            do
+            {
+                Console.WriteLine("1. Поиск по типу");
+                Console.WriteLine("2. Поиск по площади");
+                Console.WriteLine("3. Поиск по стоимости");
+                Console.WriteLine("0. Назад");
+
+                isValid = int.TryParse(Console.ReadLine(), out command);
+
+                if (!isValid || command < 0 || command > 3)
+                {
+                    Console.WriteLine("Введите номер пункта от 0 до 3.");
+                }
+                else if (command == 1)
+                {
+                    SearchByType(estates);
+                }
+                else if (command == 2)
+                {
+                    SearchByArea(estates);
+                }
+                else if (command == 3)
+                {
+                    SearchByCost(estates);
+                }
+            }
+            while (!isValid || command != 0);
+        }
+
         public void Run()
         {
             List<RealEstate> estates = LoadEstates("realestate.csv");
@@ -143,7 +177,7 @@ namespace RealtorsApp.ConsoleUI
                 }
                 else if (command == 2)
                 {
-                    SearchByType(estates);
+                    SearchMenu(estates);
                 }
             }
             while (!isValid || command != 0);

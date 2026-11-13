@@ -42,5 +42,20 @@ namespace RealtorsApp.Models
 
             return totalCost;
         }
+
+        public double GetTotalCostWithDiscount()
+        {
+            double totalCost = 0;
+
+            foreach (RealEstate estate in Estates)
+            {
+                double cost = estate.GetCost();
+                int discount = estate.CalculateDiscount();
+
+                totalCost += cost - cost * discount / 100;
+            }
+
+            return totalCost;
+        }
     }
 }

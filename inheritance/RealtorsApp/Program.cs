@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RealtorsApp.ConsoleUI;
 
 namespace RealtorsApp
 {
@@ -10,6 +6,8 @@ namespace RealtorsApp
     {
         static void Main(string[] args)
         {
+            ConsoleMenu menu = new ConsoleMenu();
+            menu.Run();
         }
     }
 }

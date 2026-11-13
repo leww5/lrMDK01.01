@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using RealtorsApp.Models;
 
 namespace RealtorsApp.ConsoleUI
 {
@@ -10,6 +12,15 @@ namespace RealtorsApp.ConsoleUI
             Console.WriteLine("2. Найти объект");
             Console.WriteLine("3. Создать заявку");
             Console.WriteLine("0. Выход");
+        }
+
+        public void ShowEstates(List<RealEstate> estates)
+        {
+            for (int i = 0; i < estates.Count; i++)
+            {
+                Console.Write((i + 1) + ". ");
+                estates[i].PrintInfo();
+            }
         }
 
         public void Run()

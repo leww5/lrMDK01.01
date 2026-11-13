@@ -20,5 +20,10 @@ namespace RealtorsApp.Models
         {
             Estates.Remove(estate);
         }
+
+        public List<RealEstate> GetEstates()
+        {
+            return Estates;
+        }
     }
 }

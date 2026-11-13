@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using RealtorsApp.Data;
 using RealtorsApp.Models;
 
 namespace RealtorsApp.ConsoleUI
@@ -21,6 +22,14 @@ namespace RealtorsApp.ConsoleUI
                 Console.Write((i + 1) + ". ");
                 estates[i].PrintInfo();
             }
+        }
+
+        public List<RealEstate> LoadEstates(string filePath)
+        {
+            RealEstateRepository repository =
+                new RealEstateRepository();
+
+            return repository.LoadFromFile(filePath);
         }
 
         public void Run()

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using RealtorsApp.Data;
 using RealtorsApp.Models;
+using RealtorsApp.Services;
 
 namespace RealtorsApp.ConsoleUI
 {
@@ -32,6 +33,27 @@ namespace RealtorsApp.ConsoleUI
             return repository.LoadFromFile(filePath);
         }
 
+        public void SearchByType(List<RealEstate> estates)
+        {
+            Console.Write("Введите тип недвижимости: ");
+            string type = Console.ReadLine();
+
+            RealEstateSearchService searchService =
+                new RealEstateSearchService();
+
+            List<RealEstate> result =
+                searchService.FindByType(estates, type);
+
+            if (result.Count == 0)
+            {
+                Console.WriteLine("Объекты не найдены.");
+            }
+            else
+            {
+                ShowEstates(result);
+            }
+        }
+
         public void Run()
         {
             List<RealEstate> estates = LoadEstates("realestate.csv");
@@ -50,6 +72,10 @@ namespace RealtorsApp.ConsoleUI
                 else if (command == 1)
                 {
                     ShowEstates(estates);
+                }
+                else if (command == 2)
+                {
+                    SearchByType(estates);
                 }
             }
             while (!isValid || command != 0);

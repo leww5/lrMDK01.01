@@ -54,6 +54,43 @@ namespace RealtorsApp.ConsoleUI
             }
         }
 
+        public void SearchByArea(List<RealEstate> estates)
+        {
+            double minArea;
+            double maxArea;
+
+            Console.Write("Введите минимальную площадь: ");
+            bool minIsValid = double.TryParse(
+                Console.ReadLine(),
+                out minArea);
+
+            Console.Write("Введите максимальную площадь: ");
+            bool maxIsValid = double.TryParse(
+                Console.ReadLine(),
+                out maxArea);
+
+            if (!minIsValid || !maxIsValid || minArea > maxArea)
+            {
+                Console.WriteLine("Введите корректный диапазон площади.");
+                return;
+            }
+
+            RealEstateSearchService searchService =
+                new RealEstateSearchService();
+
+            List<RealEstate> result =
+                searchService.FindByArea(estates, minArea, maxArea);
+
+            if (result.Count == 0)
+            {
+                Console.WriteLine("Объекты не найдены.");
+            }
+            else
+            {
+                ShowEstates(result);
+            }
+        }
+
         public void Run()
         {
             List<RealEstate> estates = LoadEstates("realestate.csv");

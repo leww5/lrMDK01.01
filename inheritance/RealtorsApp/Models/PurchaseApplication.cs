@@ -15,5 +15,10 @@ namespace RealtorsApp.Models
                 Estates.Add(estate);
             }
         }
+
+        public void RemoveEstate(RealEstate estate)
+        {
+            Estates.Remove(estate);
+        }
     }
 }

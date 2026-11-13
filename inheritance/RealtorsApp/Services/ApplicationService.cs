@@ -1,5 +1,3 @@
-using System;
-using System.Text;
 using RealtorsApp.Models;
 
 namespace RealtorsApp.Services
@@ -8,29 +6,30 @@ namespace RealtorsApp.Services
     {
         public string BuildApplication(PurchaseApplication application)
         {
-            StringBuilder result = new StringBuilder();
+            string result = "";
             DiscountService discountService = new DiscountService();
 
-            result.AppendLine("ЗАЯВКА НА ПОКУПКУ");
-            result.AppendLine("-------------------------");
+            result += "ЗАЯВКА НА ПОКУПКУ\n";
+            result += "-------------------------\n";
 
             foreach (RealEstate estate in application.GetEstates())
             {
-                Console.WriteLine( $"{estate.GetEstateType()} | Площадь: {estate.GetArea()} м² | Адрес: {estate.GetAddress()} | Стоимость: {estate.GetCost()} | Собственник: {estate.GetOwner()}");
+                result +=
+                    $"{estate.GetEstateType()} | Площадь: {estate.GetArea()} м² | Адрес: {estate.GetAddress()} | Стоимость: {estate.GetCost()} | Собственник: {estate.GetOwner()}\n";
 
-                Console.WriteLine( $"Скидка: {estate.CalculateDiscount()}% | Цена со скидкой: {discountService.GetFinalCost(estate)}");
+                result +=
+                    $"Скидка: {estate.CalculateDiscount()}% | Цена со скидкой: {discountService.GetFinalCost(estate)}\n";
 
-                result.AppendLine();
+                result += "\n";
             }
 
-            result.AppendLine("-------------------------");
-            result.AppendLine(
-                "Стоимость без скидки: " + application.GetTotalCost());
-            result.AppendLine(
+            result += "-------------------------\n";
+            result += "Стоимость без скидки: " + application.GetTotalCost() + "\n";
+            result +=
                 "Итоговая стоимость: " +
-                application.GetTotalCostWithDiscount());
+                application.GetTotalCostWithDiscount() + "\n";
 
-            return result.ToString();
+            return result;
         }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using RealtorsApp.Models;
 
@@ -6,9 +7,19 @@ namespace RealtorsApp.Data
 {
     public class RealEstateRepository
     {
-        public string[] LoadFromFile(string filePath)
+        public List<RealEstate> LoadFromFile(string filePath)
         {
-            return File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(filePath);
+            List<RealEstate> estates = new List<RealEstate>();
+
+            for (int i = 1; i < lines.Length; i++)
+            {
+                string[] parts = SplitLine(lines[i]);
+                RealEstate estate = CreateRealEstate(parts);
+                estates.Add(estate);
+            }
+
+            return estates;
         }
 
         public string[] SplitLine(string line)

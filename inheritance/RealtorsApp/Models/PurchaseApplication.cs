@@ -7,5 +7,13 @@ namespace RealtorsApp.Models
     {
         private List<RealEstate> Estates =
             new List<RealEstate>();
+
+        public void AddEstate(RealEstate estate)
+        {
+            if (estate != null)
+            {
+                Estates.Add(estate);
+            }
+        }
     }
 }

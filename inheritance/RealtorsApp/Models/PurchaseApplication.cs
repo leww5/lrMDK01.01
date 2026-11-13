@@ -25,5 +25,10 @@ namespace RealtorsApp.Models
         {
             return Estates;
         }
+
+        public int GetEstateCount()
+        {
+            return Estates.Count;
+        }
     }
 }

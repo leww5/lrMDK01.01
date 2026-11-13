@@ -11,5 +11,23 @@ namespace RealtorsApp.ConsoleUI
             Console.WriteLine("3. Создать заявку");
             Console.WriteLine("0. Выход");
         }
+
+        public void Run()
+        {
+            int command;
+            bool isValid;
+
+            do
+            {
+                ShowMainMenu();
+                isValid = int.TryParse(Console.ReadLine(), out command);
+
+                if (!isValid || command < 0 || command > 3)
+                {
+                    Console.WriteLine("Введите номер пункта от 0 до 3.");
+                }
+            }
+            while (!isValid || command != 0);
+        }
     }
 }

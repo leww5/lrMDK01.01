@@ -9,7 +9,7 @@ namespace RealtorsApp.Models
         protected string Address_;
         protected double Cost_;
         protected string Owner_;
-        protected int DefaultDiscount_;
+        protected int DefaultDiscount_ = 0;
 
         public string GetEstateType()
         {

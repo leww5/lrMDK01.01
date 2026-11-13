@@ -21,6 +21,5 @@ namespace RealtorsApp.Models
             }
             return discount;
         }
-
     }
 }

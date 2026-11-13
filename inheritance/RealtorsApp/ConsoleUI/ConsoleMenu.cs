@@ -34,6 +34,7 @@ namespace RealtorsApp.ConsoleUI
 
         public void Run()
         {
+            List<RealEstate> estates = LoadEstates("realestate.csv");
             int command;
             bool isValid;
 
@@ -45,6 +46,10 @@ namespace RealtorsApp.ConsoleUI
                 if (!isValid || command < 0 || command > 3)
                 {
                     Console.WriteLine("Введите номер пункта от 0 до 3.");
+                }
+                else if (command == 1)
+                {
+                    ShowEstates(estates);
                 }
             }
             while (!isValid || command != 0);

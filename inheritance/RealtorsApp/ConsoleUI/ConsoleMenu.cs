@@ -156,6 +156,45 @@ namespace RealtorsApp.ConsoleUI
             while (!isValid || command != 0);
         }
 
+        public void CreateApplication(List<RealEstate> estates)
+        {
+            PurchaseApplication application =
+                new PurchaseApplication();
+            int number;
+            bool isValid;
+
+            ShowEstates(estates);
+            Console.WriteLine("Введите номер объекта или 0 для завершения:");
+
+            do
+            {
+                isValid = int.TryParse(Console.ReadLine(), out number);
+
+                if (!isValid || number < 0 || number > estates.Count)
+                {
+                    Console.WriteLine("Введите корректный номер объекта.");
+                }
+                else if (number != 0)
+                {
+                    application.AddEstate(estates[number - 1]);
+                }
+            }
+            while (!isValid || number != 0);
+
+            if (application.GetEstateCount() == 0)
+            {
+                Console.WriteLine("Заявка не содержит объектов.");
+            }
+            else
+            {
+                ApplicationService applicationService =
+                    new ApplicationService();
+
+                Console.WriteLine(
+                    applicationService.BuildApplication(application));
+            }
+        }
+
         public void Run()
         {
             List<RealEstate> estates = LoadEstates("realestate.csv");
@@ -178,6 +217,10 @@ namespace RealtorsApp.ConsoleUI
                 else if (command == 2)
                 {
                     SearchMenu(estates);
+                }
+                else if (command == 3)
+                {
+                    CreateApplication(estates);
                 }
             }
             while (!isValid || command != 0);

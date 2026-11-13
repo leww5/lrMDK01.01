@@ -30,5 +30,17 @@ namespace RealtorsApp.Models
         {
             return Estates.Count;
         }
+
+        public double GetTotalCost()
+        {
+            double totalCost = 0;
+
+            foreach (RealEstate estate in Estates)
+            {
+                totalCost += estate.GetCost();
+            }
+
+            return totalCost;
+        }
     }
 }

@@ -9,5 +9,10 @@ namespace RealtorsApp.Data
         {
             return File.ReadAllLines(filePath);
         }
+
+        public string[] SplitLine(string line)
+        {
+            return line.Split(';');
+        }
     }
 }

@@ -91,6 +91,37 @@ namespace RealtorsApp.ConsoleUI
             }
         }
 
+        public void SearchByCost(List<RealEstate> estates)
+        {
+            double maxCost;
+
+            Console.Write("Введите максимальную стоимость: ");
+            bool isValid = double.TryParse(
+                Console.ReadLine(),
+                out maxCost);
+
+            if (!isValid || maxCost < 0)
+            {
+                Console.WriteLine("Введите корректную стоимость.");
+                return;
+            }
+
+            RealEstateSearchService searchService =
+                new RealEstateSearchService();
+
+            List<RealEstate> result =
+                searchService.FindByCost(estates, maxCost);
+
+            if (result.Count == 0)
+            {
+                Console.WriteLine("Объекты не найдены.");
+            }
+            else
+            {
+                ShowEstates(result);
+            }
+        }
+
         public void Run()
         {
             List<RealEstate> estates = LoadEstates("realestate.csv");

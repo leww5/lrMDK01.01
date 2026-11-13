@@ -41,5 +41,22 @@ namespace RealtorsApp.Services
 
             return result;
         }
+
+        public List<RealEstate> FindByCost(
+            List<RealEstate> estates,
+            double maxCost)
+        {
+            List<RealEstate> result = new List<RealEstate>();
+
+            foreach (RealEstate estate in estates)
+            {
+                if (estate.GetCost() <= maxCost)
+                {
+                    result.Add(estate);
+                }
+            }
+
+            return result;
+        }
     }
 }

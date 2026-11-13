@@ -12,11 +12,11 @@ namespace RealtorsApp.Models
                 default:
                     discount = DefaultDiscount_;
                     break;
-                case int n when n >= 20 && n <= 40:
-                    discount = 5;
-                    break;
-                case int n when n < 20:
+                case int n when n <= 20:
                     discount = 10;
+                    break;
+                case int n when n > 20 && n <= 40:
+                    discount = 5;
                     break;
             }
             return discount;

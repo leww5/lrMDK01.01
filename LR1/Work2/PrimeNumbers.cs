@@ -33,7 +33,6 @@ namespace Work2
                     if (number % i == 0)
                     {
                         return false;
-                        break;
                     }
                 }
             }
